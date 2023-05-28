@@ -9,7 +9,7 @@ node {
 
     stage('Build Docker image') {
   
-       app = docker.build("192.168.56.120:9091/argocd-dev/devopsodia:${env.BUILD_NUMBER}")
+       app = docker.build("https://github.com/mallick700/argocd-build-image.git:${env.BUILD_NUMBER}")
     }
 
     stage('Test Docker image') {
