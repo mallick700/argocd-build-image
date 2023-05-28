@@ -21,7 +21,7 @@ node {
     }
 
     stage('Push image to Nexus') {
-        sh 'docker login -u admin -p admin http://3.15.204.31:8081/repository/argo-cd-repo/'
+        sh 'docker login -u admin -p admin --insecure http://3.15.204.31:8081/repository/argo-cd-repo/'
             app.push("${env.BUILD_NUMBER}")
     }
     stage('Trigger Update Manifest') {
