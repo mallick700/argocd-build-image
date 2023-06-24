@@ -9,7 +9,7 @@ node {
 
     stage('Build Docker image') {
   
-       app = docker.build("3.15.204.31:9090/argo-cd-repo/argo-image:${env.BUILD_NUMBER}")
+       //app = docker.build("3.15.204.31:9090/argo-cd-repo/argo-image:${env.BUILD_NUMBER}")
     }
 
     stage('Test Docker image') {
